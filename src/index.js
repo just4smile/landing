@@ -1,5 +1,8 @@
 import './main.scss';
 import 'bootstrap';
+import 'multiscroll.js';
+import 'jquery.easing';
 
-// $('body').click(() => alert('work'))
+$('#multiscroll').multiscroll();
+
 console.log('work');
