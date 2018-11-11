@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "https://just4smile.github.io/landing/",
   "dependencies": {
     "bootstrap": "^4.1.3",
     "clean-webpack-plugin": "^0.1.19",
