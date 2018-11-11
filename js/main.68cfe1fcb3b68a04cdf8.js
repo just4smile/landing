@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[0],[,function(o,n,c){"use strict";c.r(n),function(o){c(2),c(3),c(6),c(7);o("#multiscroll").multiscroll(),console.log("work")}.call(this,c(0))},function(o,n,c){}],[[1,1,2]]]);
+//# sourceMappingURL=main.68cfe1fcb3b68a04cdf8.js.map
