@@ -1,21 +1,41 @@
-.main {
-    background: green;
+.ms-left {
+  .main {
+    background: url('./static/1.png'), #000;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    background-position-y: center;
+    .fullscreen {
+      background: rgba(0, 0, 0, 0.6);
+    }
+  }
+  .advantages {
+    background: linear-gradient(135deg, #6f42c1 0%, #4582ec 100%);
+  }
 }
-
-.advantages {
-    background: yellow;
+.ms-right {
+  .advantages {
+    background: linear-gradient(45deg, #4582ec 0%, #6f42c1 100%);
+  }
+  .main {
+    background: url('./static/2.png'), #000;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left;
+    background-position-y: center;
+  }
 }
 
 .examples {
-    background: white;
+  background: white;
 }
 
 .fullscreen {
-    width: 200%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    z-index: 1;
+  width: 200%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
 }
