@@ -26,6 +26,28 @@ module.exports = function(base, env) {
           },
         },
         {
+          test: /\.(gif|png|jpe?g|svg)$/i,
+          use: [
+            {
+              loader: 'url-loader',
+              options: {
+                limit: 8192,
+                name: 'public/[name].[ext]?[hash:7]',
+              },
+            },
+            {
+              loader: 'image-webpack-loader',
+              options: {
+                bypassOnDebug: true,
+                mozjpeg: {
+                  progressive: true,
+                  quality: 75,
+                },
+              },
+            },
+          ],
+        },
+        {
           test: /\.html$/,
           use: [
             {

@@ -1,0 +1,21 @@
+.main {
+    background: green;
+}
+
+.advantages {
+    background: yellow;
+}
+
+.examples {
+    background: white;
+}
+
+.fullscreen {
+    width: 200%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+}
