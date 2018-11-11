@@ -1,0 +1,155 @@
+//variables
+$pink: #DE6262;
+$dark: #333741;
+$peach: #FFB88C;
+$green: #52c234;
+$card-color: #ff0000;
+$text-color : #fff;
+
+
+
+//animation
+@keyframes slide-in {
+  0% {
+    transform: translate3d(-300px, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slide-in-slow {
+  0% {
+    transform: translate3d(-300px, 0, 0);
+  }
+  20% {
+    transform: translate3d(-300px, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slide-in-right {
+  0% {
+    transform: translate3d(400px, 0, 0);
+  }
+  30% {
+    transform: translate3d(400px, 0, 0);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+//хуета ПОТОМ УДАЛИТЬ
+.simple-block {
+    background: $card-color;
+    padding: 50px;
+    max-width: 200px;
+    margin: 15px 5px 15px 5px;
+    &:hover {
+        background: lighten($card-color, 30%); 
+    }
+} 
+
+
+// lets go
+.card-container {
+  perspective: 1000;
+  margin: 0 auto 50px;
+  width: 400px;
+}
+
+.front, .back {
+  backface-visibility: hidden;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 30px;
+  box-sizing: border-box;
+  transition-delay: 0.15s;
+  transition: 0;
+}
+
+.card {
+  position: relative;
+  width: 400px;
+  height: 450px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 40px 110px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+  transition: 0.5s;
+	transform-style: preserve-3d;
+
+}
+
+
+.sub-title {
+  color: $pink;
+  animation: slide-in 0.75s;
+  animation: slide-in 0.75s cubic-bezier(0.625, 0.075, 0.110, 1.165);
+  animation-timing-function: cubic-bezier(0.625, 0.075, 0.110, 1.165);
+  font-size: 18px;
+  font-weight: 200;
+  margin: 0 0 5px 0;
+}
+
+.title {
+  color: $dark;
+  animation: slide-in-slow 0.75s;
+  animation: slide-in-slow 0.75s cubic-bezier(0.625, 0.075, 0.110, 1.165);
+  animation-timing-function: cubic-bezier(0.625, 0.075, 0.110, 1.165);
+  font-size: 30px;
+  font-weight: 600;
+  margin: 0;
+}
+
+
+.synopsis {
+  color: $pink;
+  font-size: 27px;
+  font-weight: 600;
+  margin: 0 0 15px;
+}
+
+.synopsis-text {
+  color: $text-color;
+  font-size: 19px;
+  line-height: 1.5;
+  margin: 0 0 35px;
+}
+
+
+.rotate {
+  .front {
+    //transform: rotateY(0deg);
+  }
+  .back {
+    transform: rotateY(180deg);
+    opacity: 0;
+    padding-top: 60px;
+    backface-visibility: visible;
+    background: $dark;
+    color: white;
+  }
+  
+    &:hover {
+      transform: rotateY(180deg);
+      .front {
+        opacity: 0;
+      }
+      .back {
+        opacity: 1;
+      }
+    }
+  
+}
